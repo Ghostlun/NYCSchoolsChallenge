@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ske-em-D2r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NYC Schools-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="NYC Schools" id="BYZ-38-t0r" customClass="NYCSchoolListViewController" customModule="NYCSchoolsFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-fj-aqb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="Vtp-28-Lv9">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ESn-fj-aqb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B2N-jV-v8D"/>
+                            <constraint firstItem="ESn-fj-aqb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BfM-5j-jMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ESn-fj-aqb" secondAttribute="trailing" id="IoB-Oj-TwM"/>
+                            <constraint firstItem="ESn-fj-aqb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Z1Y-cC-jLF"/>
+                            <constraint firstItem="ESn-fj-aqb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hoV-gN-ad4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NYC Schools" id="Cih-1S-VHD"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Vtp-28-Lv9" id="iVV-ky-fKR"/>
+                        <outlet property="tableView" destination="ESn-fj-aqb" id="esT-hO-6Va"/>
+                        <segue destination="Iee-rl-rMh" kind="push" identifier="nycSchoolDetails" id="p2I-7w-Uob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="85.714285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lGm-cw-tYk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ske-em-D2r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iuv-VA-lYY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TeK-WT-G5i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvf-hL-pHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+        <!--NYC Schools-->
+        <scene sceneID="Qfo-BD-pcq">
+            <objects>
+                <viewController storyboardIdentifier="NYCSchoolDetailsViewController" title="NYC Schools" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iee-rl-rMh" customClass="NYCSchoolDetailsViewController" customModule="NYCSchoolsFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fMQ-OB-404">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name: william High School" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiX-tu-vEO">
+                                <rect key="frame" x="8" y="104" width="398" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cy-bh-xzU">
+                                <rect key="frame" x="8" y="141.5" width="398" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDo-fU-0Fz" customClass="ExternalButton" customModule="NYCSchoolsFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="326" width="414" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="phone" catalog="system" title="123-456-7890"/>
+                                <connections>
+                                    <action selector="callButtonClicked" destination="Iee-rl-rMh" eventType="touchUpInside" id="gxX-AG-Ho7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-te-sWA" customClass="ExternalButton" customModule="NYCSchoolsFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="365" width="414" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="network" catalog="system" title="abc@website.com"/>
+                                <connections>
+                                    <action selector="openWebsite" destination="Iee-rl-rMh" eventType="touchUpInside" id="avX-81-vdX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jB-1k-zLz" customClass="ExternalButton" customModule="NYCSchoolsFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="404" width="414" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location" catalog="system" title="abc street, abc, Georgia"/>
+                                <connections>
+                                    <action selector="openMap" destination="Iee-rl-rMh" eventType="touchUpInside" id="LYn-gI-2Vv"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-4f-fmr">
+                                <rect key="frame" x="8" y="443" width="398" height="411"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Fz-NXB">
+                                <rect key="frame" x="8" y="168" width="398" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Wv5-Zj-OCD"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0Y9-Mm-jMJ">
+                                <rect key="frame" x="197" y="362" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ncU-dt-fyK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JiX-tu-vEO" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" constant="8" id="0NW-9p-x46"/>
+                            <constraint firstItem="bM5-te-sWA" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" id="2U6-qA-XbR"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="AaK-4f-fmr" secondAttribute="trailing" constant="8" id="8WM-R3-ApN"/>
+                            <constraint firstItem="dDo-fU-0Fz" firstAttribute="top" secondItem="LKe-Fz-NXB" secondAttribute="bottom" constant="8" id="ADd-QI-Nd8"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="5jB-1k-zLz" secondAttribute="trailing" id="BLe-Ra-dyz"/>
+                            <constraint firstItem="LKe-Fz-NXB" firstAttribute="top" secondItem="5Cy-bh-xzU" secondAttribute="bottom" constant="8" id="I0d-XE-UwF"/>
+                            <constraint firstItem="AaK-4f-fmr" firstAttribute="top" secondItem="5jB-1k-zLz" secondAttribute="bottom" constant="8" id="M2V-cq-JLj"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="bottom" secondItem="AaK-4f-fmr" secondAttribute="bottom" constant="8" id="MFT-a3-uDp"/>
+                            <constraint firstItem="5Cy-bh-xzU" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" constant="8" id="MZL-26-pyr"/>
+                            <constraint firstItem="5jB-1k-zLz" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" id="Tsr-c3-3c5"/>
+                            <constraint firstItem="bM5-te-sWA" firstAttribute="top" secondItem="dDo-fU-0Fz" secondAttribute="bottom" constant="8" id="Ufj-6U-cPd"/>
+                            <constraint firstItem="5jB-1k-zLz" firstAttribute="top" secondItem="bM5-te-sWA" secondAttribute="bottom" constant="8" id="V2v-af-bPd"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="LKe-Fz-NXB" secondAttribute="trailing" constant="8" id="ZmP-xf-uV6"/>
+                            <constraint firstItem="JiX-tu-vEO" firstAttribute="top" secondItem="ncU-dt-fyK" secondAttribute="top" constant="16" id="eLz-V4-BFo"/>
+                            <constraint firstItem="5Cy-bh-xzU" firstAttribute="top" secondItem="JiX-tu-vEO" secondAttribute="bottom" constant="16" id="hMK-ue-gYX"/>
+                            <constraint firstItem="dDo-fU-0Fz" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" id="i6Q-HY-Okq"/>
+                            <constraint firstItem="AaK-4f-fmr" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" constant="8" id="j9z-Om-ykW"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="JiX-tu-vEO" secondAttribute="trailing" constant="8" id="lnX-Le-vf4"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="5Cy-bh-xzU" secondAttribute="trailing" constant="8" id="lzk-Mg-XPJ"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="bM5-te-sWA" secondAttribute="trailing" id="mIg-Sh-fBy"/>
+                            <constraint firstItem="ncU-dt-fyK" firstAttribute="trailing" secondItem="dDo-fU-0Fz" secondAttribute="trailing" id="nvy-9J-V35"/>
+                            <constraint firstItem="LKe-Fz-NXB" firstAttribute="leading" secondItem="ncU-dt-fyK" secondAttribute="leading" constant="8" id="ssv-Ov-Qvz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q1e-Yy-HAH"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0Y9-Mm-jMJ" id="c6R-ia-Vy1"/>
+                        <outlet property="schoolAddressButton" destination="5jB-1k-zLz" id="U2Y-Un-x5L"/>
+                        <outlet property="schoolNameLabel" destination="JiX-tu-vEO" id="dJK-hu-8Y3"/>
+                        <outlet property="schoolOverviewTextView" destination="LKe-Fz-NXB" id="o1F-RI-MRF"/>
+                        <outlet property="schoolPhoneNumberButton" destination="dDo-fU-0Fz" id="cLp-S3-WaH"/>
+                        <outlet property="schoolWebsiteButton" destination="bM5-te-sWA" id="S3w-Nm-Dcl"/>
+                        <outlet property="tableView" destination="AaK-4f-fmr" id="wOC-lI-XHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsl-oV-SI2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="network" catalog="system" width="128" height="121"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

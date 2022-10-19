@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="NYCSchoolTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NYCSchoolTableViewCell" rowHeight="123" id="KGk-i7-Jjw" customClass="NYCSchoolTableViewCell" customModule="NYCSchoolsFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="123-456-1010" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd1-IE-AnN">
+                        <rect key="frame" x="16" y="64" width="272" height="32"/>
+                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="16"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="William High School" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khO-0n-XXI">
+                        <rect key="frame" x="16" y="41.5" width="288" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="School Name: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8L-sF-CpI">
+                        <rect key="frame" x="16" y="16" width="288" height="21.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qd1-IE-AnN" firstAttribute="top" secondItem="khO-0n-XXI" secondAttribute="bottom" constant="4" id="57p-Ae-OAK"/>
+                    <constraint firstItem="v8L-sF-CpI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6rw-6A-sDq"/>
+                    <constraint firstItem="khO-0n-XXI" firstAttribute="top" secondItem="v8L-sF-CpI" secondAttribute="bottom" constant="4" id="9Or-Vr-mgs"/>
+                    <constraint firstItem="v8L-sF-CpI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="AWa-Jf-03U"/>
+                    <constraint firstItem="khO-0n-XXI" firstAttribute="top" secondItem="v8L-sF-CpI" secondAttribute="bottom" constant="4" id="Atb-00-Vif"/>
+                    <constraint firstItem="qd1-IE-AnN" firstAttribute="leading" secondItem="khO-0n-XXI" secondAttribute="leading" id="W7d-kz-rNc"/>
+                    <constraint firstAttribute="trailing" secondItem="v8L-sF-CpI" secondAttribute="trailing" constant="16" id="i3U-o9-4jE"/>
+                    <constraint firstAttribute="trailing" secondItem="khO-0n-XXI" secondAttribute="trailing" constant="16" id="i4i-Vk-RPw"/>
+                    <constraint firstItem="khO-0n-XXI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jjd-1o-Lc8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qd1-IE-AnN" secondAttribute="trailing" constant="16" id="of2-nn-7jb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qd1-IE-AnN" secondAttribute="bottom" constant="16" id="y4R-9n-g0w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="khO-0n-XXI" id="rFj-E7-Jor"/>
+                <outlet property="phoneNumberLabel" destination="qd1-IE-AnN" id="R78-Gd-i1t"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="139.62053571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
