@@ -6,9 +6,9 @@ This project allows users to search NYCSchools information
 <h4> Yoonha Kim </h4>
 
 <h4>App Information </h4>
-It is a NYCSchoolsFindProject using nyc Api
+It is a NYCSchoolsFindProject using NYC Api
 
-<h3>API</h3>
+<h3>API Information</h3>
 <div><b>NYC open data Api, It provides information about the NYCSchools Finder App. <b></div>
 https://data.cityofnewyork.us/resource/s3k6-pzi2.json
 <div></div>
